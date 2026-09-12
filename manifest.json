@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CTRL+F Pro",
+  "version": "5.0.0",
+  "description": "Advanced cross-tab browser search with KMP matching, highlighting, navigation, history and ranking.",
+  "permissions": ["tabs", "storage", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Open CTRL+F Pro"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "minimum_chrome_version": "114"
+}

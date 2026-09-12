@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTRL+F Pro</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>CTRL+F Pro</h1>
+        <p>Cross-tab browser search</p>
+      </div>
+      <button id="clearButton" class="icon-button" title="Clear search">Clear</button>
+    </header>
+
+    <section class="search-box">
+      <input id="searchInput" type="search" placeholder="Search across open tabs..." autocomplete="off" spellcheck="false">
+      <button id="searchButton">Search</button>
+    </section>
+
+    <div class="shortcuts">Enter: search · Esc: clear · Results are ranked by match count</div>
+
+    <section class="status-row">
+      <span id="status">Ready to search</span>
+      <span id="timer"></span>
+    </section>
+
+    <section class="history-section">
+      <div class="section-title">
+        <span>Recent searches</span>
+        <button id="clearHistoryButton">Clear history</button>
+      </div>
+      <div id="history" class="history"></div>
+    </section>
+
+    <section id="results" class="results">
+      <div class="empty-message">Enter a word or phrase to search all open tabs.</div>
+    </section>
+  </main>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
